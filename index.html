@@ -1,0 +1,1583 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Batman 💗</title>
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    font-family:"Segoe UI",sans-serif;
+    color:white;
+    background:
+        radial-gradient(circle at 15% 20%,#5b1745,transparent 28%),
+        radial-gradient(circle at 85% 75%,#35154d,transparent 30%),
+        linear-gradient(135deg,#08020c,#190715,#08020c);
+    overflow-x:hidden;
+}
+
+.star{
+    position:fixed;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    opacity:.6;
+    z-index:-1;
+    animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{
+        opacity:.2;
+        transform:scale(.5);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1.5);
+    }
+}
+
+
+/* =========================
+   COMMON PAGE
+========================= */
+
+.page{
+    min-height:100vh;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:30px 20px;
+}
+
+.hidden{
+    display:none !important;
+}
+
+
+/* =========================
+   PAGE 1 - CAKE
+========================= */
+
+#cakePage{
+    flex-direction:column;
+}
+
+.small-title{
+    color:#ff9dcc;
+    letter-spacing:4px;
+    font-size:13px;
+    margin-bottom:15px;
+}
+
+#cakePage h1{
+    font-size:42px;
+    text-shadow:
+        0 0 20px rgba(255,100,180,.5);
+}
+
+.cake-area{
+    position:relative;
+    width:320px;
+    height:300px;
+    margin:15px 0;
+}
+
+
+/* Cake */
+
+.cake{
+    position:absolute;
+    width:240px;
+    height:110px;
+    left:40px;
+    bottom:45px;
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #a91f61,
+            #ff5797,
+            #9d1c59
+        );
+
+    box-shadow:
+        0 20px 50px rgba(255,40,140,.35);
+}
+
+
+/* Cake top */
+
+.cake-top{
+    position:absolute;
+    top:-22px;
+    left:-5px;
+    width:250px;
+    height:45px;
+    border-radius:50%;
+
+    background:#ffd9e9;
+
+    box-shadow:
+        0 0 20px rgba(255,150,200,.4);
+}
+
+
+/* Cream */
+
+.cream{
+    position:absolute;
+    top:0;
+    width:28px;
+    height:35px;
+    background:#fff0f7;
+    border-radius:0 0 20px 20px;
+}
+
+.c1{
+    left:30px;
+}
+
+.c2{
+    left:90px;
+    height:45px;
+}
+
+.c3{
+    left:150px;
+    height:30px;
+}
+
+.c4{
+    left:205px;
+    height:40px;
+}
+
+
+/* Candles */
+
+.candle{
+    position:absolute;
+    bottom:135px;
+    width:17px;
+    height:70px;
+    border-radius:5px;
+
+    background:
+        repeating-linear-gradient(
+            45deg,
+            white 0 8px,
+            #ff4f91 8px 16px
+        );
+
+    z-index:5;
+}
+
+.can1{
+    left:85px;
+}
+
+.can2{
+    left:150px;
+}
+
+.can3{
+    left:215px;
+}
+
+
+/* Flame */
+
+.flame{
+    position:absolute;
+    width:18px;
+    height:28px;
+    top:-32px;
+    left:0;
+
+    background:
+        linear-gradient(
+            #fff,
+            #ffd000,
+            #ff6200
+        );
+
+    border-radius:60% 40% 60% 40%;
+
+    transform:rotate(45deg);
+
+    box-shadow:
+        0 0 15px #ffd000,
+        0 0 30px #ff8500;
+
+    animation:flicker .5s infinite alternate;
+}
+
+@keyframes flicker{
+    from{
+        transform:rotate(40deg) scale(.9);
+    }
+
+    to{
+        transform:rotate(50deg) scale(1.1);
+    }
+}
+
+.flame.off{
+    animation:blowOut .6s forwards;
+}
+
+@keyframes blowOut{
+    to{
+        opacity:0;
+
+        transform:
+            translateX(70px)
+            rotate(10deg)
+            scale(.1);
+    }
+}
+
+
+/* Buttons */
+
+.blow-btn,
+.next-btn{
+    padding:14px 32px;
+    border:none;
+    border-radius:40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4f91,
+            #e91e63
+        );
+
+    color:white;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+
+    box-shadow:
+        0 10px 30px
+        rgba(233,30,99,.35);
+
+    transition:.3s;
+}
+
+.blow-btn:hover,
+.next-btn:hover{
+    transform:scale(1.07);
+
+    box-shadow:
+        0 15px 40px
+        rgba(255,50,150,.5);
+}
+
+
+/* =========================
+   PAGE 2 - BATMAN
+========================= */
+
+#batmanPage{
+    flex-direction:column;
+}
+
+.batman-small{
+    color:#ff9dcc;
+    letter-spacing:5px;
+    font-size:12px;
+    margin-bottom:15px;
+    text-transform:uppercase;
+}
+
+.batman-title{
+    font-size:clamp(38px,8vw,72px);
+    font-weight:700;
+    line-height:1.1;
+
+    background:
+        linear-gradient(
+            90deg,
+            white,
+            #ff8fc7,
+            white
+        );
+
+    -webkit-background-clip:text;
+    color:transparent;
+
+    text-shadow:
+        0 0 30px
+        rgba(255,80,170,.3);
+}
+
+.batman-name{
+    font-size:clamp(45px,9vw,85px);
+    color:#ff8fc7;
+    font-weight:700;
+
+    text-shadow:
+        0 0 30px
+        rgba(255,80,170,.55);
+}
+
+.batman-heart{
+    display:inline-block;
+    color:#ff4f91;
+    animation:heartbeat 1s infinite;
+}
+
+@keyframes heartbeat{
+    0%,
+    100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.25);
+    }
+}
+
+
+/* Batman photo */
+
+.batman-photo{
+    width:220px;
+    height:270px;
+    padding:6px;
+    margin:25px 0;
+    border-radius:25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4f91,
+            #ffd0e7,
+            #9d2a72,
+            #ff4f91
+        );
+
+    background-size:300% 300%;
+
+    animation:borderMove 5s infinite;
+
+    box-shadow:
+        0 20px 60px
+        rgba(255,40,150,.3);
+}
+
+@keyframes borderMove{
+    0%{
+        background-position:0 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0 50%;
+    }
+}
+
+.batman-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:20px;
+    border:4px solid #10050d;
+}
+
+
+/* =========================
+   PAGE 3 - MEMORIES
+========================= */
+
+#memoryPage{
+    align-items:flex-start;
+    padding-top:45px;
+    padding-bottom:50px;
+}
+
+.memory-container{
+    width:100%;
+    max-width:850px;
+    text-align:center;
+}
+
+.memory-title{
+    font-family:Georgia,serif;
+    font-size:42px;
+    color:#ff9dcc;
+
+    text-shadow:
+        0 0 25px
+        rgba(255,80,170,.4);
+}
+
+.memory-subtitle{
+    color:#d9c5d2;
+    margin-top:8px;
+    margin-bottom:30px;
+    font-size:14px;
+    letter-spacing:1px;
+}
+
+
+/* Photo grid */
+
+.memory-grid{
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:15px;
+
+    margin-bottom:30px;
+}
+
+
+/* Photo cards */
+
+.memory-card{
+    position:relative;
+    height:220px;
+    padding:6px;
+    border-radius:18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4f91,
+            #ffd0e7,
+            #9d2a72,
+            #ff4f91
+        );
+
+    background-size:250% 250%;
+
+    animation:memoryGlow 6s infinite;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,.35);
+
+    overflow:hidden;
+    transition:.4s;
+}
+
+@keyframes memoryGlow{
+    0%{
+        background-position:0 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0 50%;
+    }
+}
+
+
+/* Different card positions */
+
+.memory-card:nth-child(2){
+    transform:
+        translateY(15px)
+        rotate(2deg);
+}
+
+.memory-card:nth-child(3){
+    transform:
+        rotate(-2deg);
+}
+
+.memory-card:nth-child(4){
+    transform:
+        rotate(2deg);
+}
+
+.memory-card:nth-child(5){
+    transform:
+        translateY(-15px)
+        rotate(-2deg);
+}
+
+.memory-card:nth-child(6){
+    transform:
+        rotate(2deg);
+}
+
+.memory-card:nth-child(7){
+    transform:
+        translateY(15px)
+        rotate(-2deg);
+}
+
+.memory-card:nth-child(8){
+    transform:
+        rotate(2deg);
+}
+
+.memory-card:hover{
+    transform:
+        translateY(-10px)
+        scale(1.04)
+        rotate(0deg);
+
+    z-index:5;
+
+    box-shadow:
+        0 20px 45px
+        rgba(255,50,150,.4);
+}
+
+.memory-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:13px;
+    border:3px solid #13060e;
+}
+
+
+/* Hearts on photos */
+
+.memory-heart{
+    position:absolute;
+    right:10px;
+    top:8px;
+    font-size:20px;
+
+    filter:
+        drop-shadow(0 2px 4px #000);
+}
+
+
+/* Small paragraph */
+
+.memory-note{
+    max-width:600px;
+    margin:0 auto 25px;
+    padding:18px 22px;
+    border-radius:20px;
+
+    background:
+        rgba(255,255,255,.06);
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    backdrop-filter:
+        blur(10px);
+}
+
+.memory-note p{
+    color:#e5d7e0;
+    font-size:14px;
+    line-height:1.8;
+}
+
+
+/* =========================
+   PAGE 4 - MAIN PHOTO
+========================= */
+
+#mainPage{
+    overflow-y:auto;
+    padding:45px 20px;
+}
+
+.main-container{
+    width:92%;
+    max-width:650px;
+    text-align:center;
+}
+
+
+/* Main photo */
+
+.main-photo{
+    width:220px;
+    height:270px;
+
+    margin:
+        0 auto 28px;
+
+    padding:6px;
+    border-radius:25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4f91,
+            #ffd0e7,
+            #e91e63,
+            #ff4f91
+        );
+
+    background-size:300% 300%;
+
+    animation:borderMove 5s infinite;
+
+    box-shadow:
+        0 20px 60px
+        rgba(255,50,150,.35);
+}
+
+.main-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:20px;
+    border:4px solid #120610;
+}
+
+
+/* Main subtitle */
+
+.main-subtitle{
+    color:#ff9dcc;
+    letter-spacing:4px;
+    font-size:12px;
+    text-transform:uppercase;
+}
+
+.main-line{
+    width:90px;
+    height:1px;
+    margin:20px auto;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #ff7dbb,
+            transparent
+        );
+}
+
+
+/* Main heading */
+
+.main-container h1{
+    font-family:Georgia,serif;
+    font-size:42px;
+    color:#ff9dcc;
+    line-height:1.2;
+
+    text-shadow:
+        0 0 25px
+        rgba(255,80,170,.4);
+}
+
+
+/* Main message */
+
+.main-message{
+    margin-top:25px;
+    padding:28px 25px;
+    border-radius:28px;
+
+    background:
+        rgba(255,255,255,.07);
+
+    border:
+        1px solid
+        rgba(255,255,255,.13);
+
+    backdrop-filter:
+        blur(15px);
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,.3);
+}
+
+.main-message p{
+    color:#e6d8e2;
+    line-height:1.9;
+    font-size:15px;
+    margin:15px 0;
+}
+
+.main-highlight{
+    color:#ffc0dd;
+    line-height:1.8;
+    padding:16px;
+    margin:18px 0;
+    border-radius:18px;
+
+    background:
+        rgba(255,70,160,.08);
+
+    border:
+        1px solid
+        rgba(255,100,180,.1);
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+.confetti{
+    position:fixed;
+    top:-20px;
+    width:8px;
+    height:16px;
+    z-index:100;
+
+    animation:
+        fall 4s linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity:.7;
+    }
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.heart{
+    position:fixed;
+    bottom:-30px;
+    z-index:80;
+    pointer-events:none;
+
+    animation:
+        floatHeart 5s linear forwards;
+}
+
+@keyframes floatHeart{
+    to{
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity:0;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+    #cakePage h1{
+        font-size:32px;
+    }
+
+    .cake-area{
+        transform:scale(.8);
+        margin-top:0;
+        margin-bottom:-20px;
+    }
+
+    .batman-photo{
+        width:190px;
+        height:230px;
+    }
+
+    /* 8 pictures - 2 columns on mobile */
+
+    .memory-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap:10px;
+    }
+
+    .memory-card{
+        height:180px;
+    }
+
+    .memory-card:nth-child(2),
+    .memory-card:nth-child(3),
+    .memory-card:nth-child(4),
+    .memory-card:nth-child(5),
+    .memory-card:nth-child(6),
+    .memory-card:nth-child(7),
+    .memory-card:nth-child(8){
+        transform:none;
+    }
+
+    .memory-title{
+        font-size:34px;
+    }
+
+    .main-photo{
+        width:190px;
+        height:235px;
+    }
+
+    .main-container h1{
+        font-size:34px;
+    }
+
+    .main-message{
+        padding:22px 18px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     CREATE STARS
+========================= -->
+
+<script>
+
+for(let i=0;i<130;i++){
+
+    const star =
+        document.createElement("div");
+
+    star.className="star";
+
+    star.style.left =
+        Math.random()*100+"vw";
+
+    star.style.top =
+        Math.random()*100+"vh";
+
+    star.style.animationDelay =
+        Math.random()*3+"s";
+
+    document.body.appendChild(star);
+}
+
+</script>
+
+
+<!-- ==================================================
+     PAGE 1
+     CAKE
+================================================== -->
+
+<section
+    class="page"
+    id="cakePage">
+
+    <div class="small-title">
+        A Little Birthday Surprise ✨
+    </div>
+
+    <h1>
+        Make A Wish 💗
+    </h1>
+
+    <div class="cake-area">
+
+        <!-- Cake -->
+
+        <div class="cake">
+
+            <div class="cake-top"></div>
+
+            <div class="cream c1"></div>
+            <div class="cream c2"></div>
+            <div class="cream c3"></div>
+            <div class="cream c4"></div>
+
+        </div>
+
+
+        <!-- Candle 1 -->
+
+        <div class="candle can1">
+
+            <div class="flame"></div>
+
+        </div>
+
+
+        <!-- Candle 2 -->
+
+        <div class="candle can2">
+
+            <div class="flame"></div>
+
+        </div>
+
+
+        <!-- Candle 3 -->
+
+        <div class="candle can3">
+
+            <div class="flame"></div>
+
+        </div>
+
+    </div>
+
+
+    <button
+        class="blow-btn"
+        id="blowButton"
+        onclick="blowCandles()">
+
+        💨 Blow The Candles
+
+    </button>
+
+</section>
+
+
+
+<!-- ==================================================
+     PAGE 2
+     BATMAN
+================================================== -->
+
+<section
+    class="page hidden"
+    id="batmanPage">
+
+    <div class="batman-small">
+        Your Special Day ✨
+    </div>
+
+    <div class="batman-title">
+        HAPPY BIRTHDAY
+    </div>
+
+    <div class="batman-name">
+
+        MY BOY
+
+        <span class="batman-heart">
+            💗
+        </span>
+
+    </div>
+
+
+    <!-- Batman Photo -->
+
+    <div class="batman-photo">
+
+        <img
+            src="C:\BB\BB\BABY.jpeg"
+            alt="Batman">
+
+    </div>
+
+
+    <button
+        class="next-btn"
+        onclick="showMemories()">
+
+        NEXT ✨
+
+    </button>
+
+</section>
+
+
+
+<!-- ==================================================
+     PAGE 3
+     MEMORIES - 8 PHOTOS
+================================================== -->
+
+<section
+    class="page hidden"
+    id="memoryPage">
+
+    <div class="memory-container">
+
+        <div class="memory-title">
+            Our Memories 💗
+        </div>
+
+        <div class="memory-subtitle">
+            Little moments, beautiful memories ✨
+        </div>
+
+
+        <!-- =========================
+             EIGHT PHOTOS
+        ========================== -->
+
+        <div class="memory-grid">
+
+
+            <!-- Memory 1 -->
+
+            <div class="memory-card">
+
+                <img
+                    src="C:\BB\BB\WhatsApp Image 2026-08-11 at 9.08.54 PM.jpeg"
+                    alt="Memory 1">
+
+                <span class="memory-heart">
+                    💗
+                </span>
+
+            </div>
+
+
+            <!-- Memory 2 -->
+
+            <div class="memory-card">
+
+                <img
+                    src="C:\BB\BB\WhatsApp Image 2026-08-11 at 9.40.40 PM.jpeg"
+                    alt="Memory 2">
+
+                <span class="memory-heart">
+                    💗
+                </span>
+
+            </div>
+
+
+            <!-- Memory 3 -->
+
+            <div class="memory-card">
+
+                <img
+                    src="C:\BB\BB\WhatsApp Image 2026-08-11 at 9.37.57 PM (1).jpeg"
+                    alt="Memory 3">
+
+                <span class="memory-heart">
+                    ✨
+                </span>
+
+            </div>
+
+
+            <!-- Memory 4 -->
+
+            <div class="memory-card">
+
+                <img
+                    src="C:\BB\BB\WhatsApp Image 2026-08-11 at 9.08.55 PM.jpeg"
+                    alt="Memory 4">
+
+                <span class="memory-heart">
+                    💗
+                </span>
+
+            </div>
+
+
+            <!-- Memory 5 -->
+
+            <div class="memory-card">
+
+                <img
+                    src="C:\BB\BB\WhatsApp Image 2026-08-11 at 10.23.12 PM.jpeg"
+                    alt="Memory 5">
+
+                <span class="memory-heart">
+                    ✨
+                </span>
+
+            </div>
+
+
+            <!-- Memory 6 -->
+
+            <div class="memory-card">
+
+                <img
+                    src="C:\BB\BB\WhatsApp Image 2026-08-11 at 9.08.55 PM (2).jpeg"
+                    alt="Memory 6">
+
+                <span class="memory-heart">
+                    💗
+                </span>
+
+            </div>
+
+
+            <!-- Memory 7 -->
+
+            <div class="memory-card">
+
+                <img
+                    src="C:\BB\BB\WhatsApp Image 2026-08-11 at 9.08.54 PM (1).jpeg"
+                    alt="Memory 7">
+
+                <span class="memory-heart">
+                    💗
+                </span>
+
+            </div>
+
+
+            <!-- Memory 8 -->
+
+            <div class="memory-card">
+
+                <img
+                    src="C:\BB\BB\WhatsApp Image 2026-08-11 at 9.37.57 PM.jpeg"
+                    alt="Memory 8">
+
+                <span class="memory-heart">
+                    ✨
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- Memory Paragraph -->
+
+        <div class="memory-note">
+
+            <p>
+
+                Some moments may look small,
+                but they become the memories
+                we remember the most. 💗
+
+                I'm really happy to have these
+                little moments with you. ✨
+
+            </p>
+
+        </div>
+
+
+        <button
+            class="next-btn"
+            onclick="showMainPage()">
+
+            NEXT 💗
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     PAGE 4
+     MAIN BIRTHDAY PAGE
+================================================== -->
+
+<section
+    class="page hidden"
+    id="mainPage">
+
+    <div class="main-container">
+
+
+        <!-- MAIN PHOTO -->
+
+        <div class="main-photo">
+
+            <img
+                src="C:\BB\BB\Mathan.jpeg"
+                alt="Mathan">
+
+        </div>
+
+
+        <div class="main-subtitle">
+            Today is all about you ✨
+        </div>
+
+
+        <div class="main-line"></div>
+
+
+        <!-- Main Heading -->
+
+        <h1>
+
+            Happy Birthday,
+            <br>
+            Mathan 🎂💗
+
+        </h1>
+
+
+        <!-- Full Message -->
+
+        <div class="main-message">
+
+
+            <p>
+
+                Some people come into our lives
+                and slowly become a special part
+                of our memories. 🤍
+
+            </p>
+
+
+            <p>
+
+                I'm really happy that I got to know
+                someone like you. 💗
+
+            </p>
+
+
+            <p>
+
+                Thank you for all the laughs,
+                conversations and little moments
+                that made things better. ✨
+
+            </p>
+
+
+            <p>
+
+                I hope this new year of your life
+                brings you happiness, peace,
+                success and beautiful memories. 🌸
+
+            </p>
+
+
+            <div class="main-highlight">
+
+                💗 I'll never forget the memories
+                we've made together.
+
+                Every little moment with you
+                is something I'll always cherish. ✨
+
+            </div>
+
+
+            <p>
+
+                Happy Birthday once again,
+                BATMAN🎂💗
+
+            </p>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     MUSIC
+================================================== -->
+
+<audio
+    id="song"
+    loop>
+
+    <source
+        src="C:\BB\BB\Anbenum -mp3.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+
+
+<script>
+
+
+/* ==================================================
+   PAGE 1 → PAGE 2
+================================================== */
+
+function blowCandles(){
+
+    const flames =
+        document.querySelectorAll(".flame");
+
+    const button =
+        document.getElementById("blowButton");
+
+    button.disabled=true;
+
+    button.innerHTML =
+        "💨 Blowing...";
+
+
+    /* Turn off candles */
+
+    flames.forEach(
+        (flame,index)=>{
+
+            setTimeout(
+                ()=>{
+
+                    flame.classList.add("off");
+
+                },
+                index*180
+            );
+
+        }
+    );
+
+
+    /* Confetti + hearts */
+
+    setTimeout(
+        ()=>{
+
+            createConfetti();
+
+            createHearts();
+
+        },
+        500
+    );
+
+
+    /* Move to Page 2 */
+
+    setTimeout(
+        ()=>{
+
+            document
+                .getElementById("cakePage")
+                .classList.add("hidden");
+
+            document
+                .getElementById("batmanPage")
+                .classList.remove("hidden");
+
+            playMusic();
+
+        },
+        1300
+    );
+
+}
+
+
+/* ==================================================
+   PAGE 2 → PAGE 3
+================================================== */
+
+function showMemories(){
+
+    document
+        .getElementById("batmanPage")
+        .classList.add("hidden");
+
+    document
+        .getElementById("memoryPage")
+        .classList.remove("hidden");
+
+    createHearts();
+
+}
+
+
+/* ==================================================
+   PAGE 3 → PAGE 4
+================================================== */
+
+function showMainPage(){
+
+    document
+        .getElementById("memoryPage")
+        .classList.add("hidden");
+
+    document
+        .getElementById("mainPage")
+        .classList.remove("hidden");
+
+    createHearts();
+
+}
+
+
+/* ==================================================
+   CONFETTI
+================================================== */
+
+function createConfetti(){
+
+    const colors=[
+        "#ff4f91",
+        "#ff9dcc",
+        "#ffd166",
+        "#ffffff",
+        "#c77dff"
+    ];
+
+
+    for(
+        let i=0;
+        i<130;
+        i++
+    ){
+
+        const c =
+            document.createElement("div");
+
+        c.className =
+            "confetti";
+
+        c.style.left =
+            Math.random()*100+"vw";
+
+        c.style.background =
+            colors[
+                Math.floor(
+                    Math.random()*colors.length
+                )
+            ];
+
+        c.style.animationDuration =
+            (2+Math.random()*3)+"s";
+
+        c.style.animationDelay =
+            Math.random()+"s";
+
+        c.style.transform =
+            `rotate(${Math.random()*360}deg)`;
+
+        document.body.appendChild(c);
+
+        setTimeout(
+            ()=>{
+
+                c.remove();
+
+            },
+            5500
+        );
+
+    }
+
+}
+
+
+/* ==================================================
+   FLOATING HEARTS
+================================================== */
+
+function createHearts(){
+
+    for(
+        let i=0;
+        i<25;
+        i++
+    ){
+
+        const heart =
+            document.createElement("div");
+
+        heart.className =
+            "heart";
+
+        heart.innerHTML =
+            Math.random() > .4
+            ? "💗"
+            : "✨";
+
+        heart.style.left =
+            Math.random()*100+"vw";
+
+        heart.style.fontSize =
+            (15+Math.random()*20)+"px";
+
+        heart.style.animationDuration =
+            (4+Math.random()*4)+"s";
+
+        heart.style.animationDelay =
+            Math.random()*2+"s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(
+            ()=>{
+
+                heart.remove();
+
+            },
+            9000
+        );
+
+    }
+
+}
+
+
+/* ==================================================
+   MUSIC
+================================================== */
+
+function playMusic(){
+
+    const song =
+        document.getElementById("song");
+
+    song.volume=.45;
+
+    song
+        .play()
+        .catch(
+            ()=>{}
+        );
+
+}
+
+</script>
+
+</body>
+</html>
+```
